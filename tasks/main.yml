@@ -1,6 +1,5 @@
 ---
 # tasks file for vm_azure
-tasks:
   - name: Create resource group
     azure_rm_resourcegroup:
       name: "{{ resource_group_name }}"
