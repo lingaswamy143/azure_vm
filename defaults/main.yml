@@ -1,2 +1,33 @@
 ---
 # defaults file for vm_azure
+resource_group_name: chubb-rg
+rg_location: eastus
+####virtual network specific ####
+virtual_network_name: myvnet
+vnet_address_prefixes: "10.0.0.0/16"
+#### subnet specific ####
+subnet_name: subnet1
+subnet_address_prefix: "10.0.1.0/24"
+#### public ip specific ####
+publicip_allocation_method: Static
+publicip_name: mypublicip
+#### network security group specifc ####
+security_group_name: mysecgroup
+security_group_rule_name: SSH
+security_group_rule_protocol: TCP
+security_group_rule_destination_port_range: 22
+security_group_rule_access: Allow
+security_group_rule_priority: 113
+security_group_rule_direction: Inbound
+#### netowrk interface card specific ###
+netowrk_interface_card_name: mynic
+### vm specifc ###
+vm_name: mysample-vm
+vm_admin_username: linux
+vm_admin_password: Helloworld2761
+vm_size: 20
+vm_ssh_password_enabled: true
+vm_offer: CentOS
+vm_publisher: OpenLogic
+vm_sku: '7.5'
+vm_version: latest
